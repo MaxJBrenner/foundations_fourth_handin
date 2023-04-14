@@ -25,10 +25,9 @@ pip install virtualenv
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
-
 ```
 
-### To Populate the DB
+### Populate the DB
 ```
 python
 from app import prepopulate
