@@ -17,5 +17,20 @@ AIForSchool.com
 
 - rating relevance on a scale of 1-5
 
+# Deployment Instructions
+### Setup environment and install packages
 
+```
+pip install virtualenv
+virtualenv env
+source env/bin/activate
+pip install -r requirements.txt
 
+```
+
+### To Populate the DB
+```
+python
+from app import prepopulate
+prepopulate()
+```
