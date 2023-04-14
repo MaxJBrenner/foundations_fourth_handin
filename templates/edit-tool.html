@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/main.css') }}"
+/>
+<title>Task Master</title>
+{% endblock %} {% block body %}
+<a href="/"><button>Go Back</button></a>
+<h1>Edit Tool Details</h1>
+<form action="/edit-tool?id={{ tool["id"] }}" method="POST">
+  Name:
+  <input type="text" id="name" name="name" value="{{ tool.name }}" /><br />
+  Description:
+  <input
+    type="text"
+    id="description"
+    name="description"
+    value="{{ tool.description }}"
+  /><br />
+  Content:
+  <input
+    type="text"
+    id="content"
+    name="content"
+    value="{{ tool.content }}"
+  /><br />
+  Link:
+  <input type="text" id="link" name="link" value="{{ tool.link }}" /><br />
+  <input type="submit">Save Changes</input>
+</form>
+{% endblock %}
